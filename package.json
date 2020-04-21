@@ -1,0 +1,33 @@
+{
+  "name": "huddle-landing-page-with-single-introductory-section-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Huddle landing page with single introductory section](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run scss-build && npm run copyall",
+    "scss-watch": "node-sass ./src/assets/scss -o ./src/assets/css --source-comments -w",
+    "scss-build": "node-sass ./src/assets/scss -o ./dist/assets/css --output-style compressed",
+    "watch": "concurrently -p \"[{name}]\" -n \"Clean,CSS,Browser-Sync\" -c \"yellow,cyan,magenta\" \"npm run clean && echo 'All Clean'\"  \"npm run scss-watch\" \"npm run serve\" ",
+    "serve": "browser-sync start -s --serveStatic \"src\" -f \"**/*.css,**/*.js,**/*.html\" --no-inject-changes --no-ghost-mode --no-ui --reload-delay 500 --port 7777",
+    "clean": "rimraf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavom/frontend-mentor-challenge-03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavom/frontend-mentor-challenge-03/issues"
+  },
+  "homepage": "https://github.com/gustavom/frontend-mentor-challenge-03#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.1.0",
+    "cpx": "^1.5.0",
+    "node-sass": "^4.13.1",
+    "rimraf": "^3.0.2"
+  }
+}
