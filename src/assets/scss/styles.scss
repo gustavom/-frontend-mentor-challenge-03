@@ -60,6 +60,10 @@ body {
       height: 100%;
       background: url(../images/logo.svg) center no-repeat;
       background-size: 198px;
+      transition: all 0.2s;
+      &:hover {
+        transform: scale(1.05);
+      }
       & > span {
         position: absolute;
         left: -9999px;
@@ -139,6 +143,11 @@ footer {
       align-items: center;
       justify-content: center;
       color: #fff;
+      transition: all 0.2s;
+      &:hover {
+        background-color: #fff;
+        color: hsl(257, 40%, 49%);
+      }
       span {
         position: absolute;
         left: -9999px;
