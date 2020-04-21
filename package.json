@@ -10,6 +10,7 @@
     "watch": "concurrently -p \"[{name}]\" -n \"Clean,CSS,Browser-Sync\" -c \"yellow,cyan,magenta\" \"npm run clean && echo 'All Clean'\"  \"npm run scss-watch\" \"npm run serve\" ",
     "serve": "browser-sync start -s --serveStatic \"src\" -f \"**/*.css,**/*.js,**/*.html\" --no-inject-changes --no-ghost-mode --no-ui --reload-delay 500 --port 7777",
     "clean": "rimraf ./dist",
+    "copyall": "cpx ./src/**/*.{html,png,jpg,svg} ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
