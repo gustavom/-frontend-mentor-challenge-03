@@ -1,0 +1,49 @@
+@import "_mixins.scss";
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 0;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #e6eff6;
+}
+
+body,
+input,
+button {
+  @include font-body();
+  font-weight: 400;
+  color: hsl(218, 22%, 67%);
+}
+
+p {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+body {
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(257, 40%, 49%);
+}
+
+// footer
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

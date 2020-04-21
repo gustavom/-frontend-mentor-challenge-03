@@ -1,0 +1,18 @@
+@mixin mqrange($breakpointsMin, $breakpointsMax) {
+  @media only screen and (min-width: $breakpointsMin) and (max-width: $breakpointsMax) {
+    @content;
+  }
+}
+
+@mixin font-body() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+@mixin font-title() {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+@mixin font-head-regular() {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
