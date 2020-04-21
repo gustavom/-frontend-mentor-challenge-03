@@ -119,8 +119,28 @@ body {
 footer {
   grid-area: footer;
   padding-top: 50px;
-  a {
-    color: hsl(257, 40%, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .icons {
+    display: flex;
+    li {
+      margin: 0 8px;
+    }
+    a {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      border: solid 1px #fff;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      span {
+        position: absolute;
+        left: -9999px;
+      }
+    }
   }
 }
 .attribution {
@@ -128,6 +148,7 @@ footer {
   text-align: center;
 }
 .attribution a {
+  color: hsl(257, 40%, 90%);
   // color: hsl(228, 45%, 44%);
   // color: hsl(257, 40%, 80%);
 }
